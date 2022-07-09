@@ -1,0 +1,38 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+register:
+  path: /register
+  controller: App\Controller\AuthController::register
+  methods: POST
+
+api_login_check:
+  path: /api/login_check
+  controller: App\Controller\AuthController::login
+
+newsId:
+  path: /news/{id}
+  controller: App\Controller\NewsController::getNewsById
+  methods: GET
+
+news:
+  path: /news
+  controller: App\Controller\NewsController::getNews
+  methods: GET
+
+addNews:
+  path: /news
+  controller: App\Controller\NewsController::addNews
+  methods: POST
+
+deleteNews:
+  path: /news/{id}
+  controller: App\Controller\NewsController::deleteNews
+  methods: DELETE
+
+updateNews:
+  path: /news/{id}
+  controller: App\Controller\NewsController::updateNews
+  methods: PUT
+
+
